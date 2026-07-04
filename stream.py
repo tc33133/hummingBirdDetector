@@ -2,10 +2,12 @@ from flask import Flask, Response
 from picamera2 import Picamera2
 import io, time
 
+FOCUS_LOCK_DIOPTERS = 2.5
+
 app = Flask(__name__)
 camera = Picamera2()
 camera.configure(camera.create_video_configuration(main={"size": (1280, 720)}))
-camera.set_controls({"AfMode": 0,"LensPosition": FOCUS_LOCK_DIOPTERS,})
+camera.set_controls({"AfMode": 0, "LensPosition": FOCUS_LOCK_DIOPTERS})
 camera.start()
 
 def generate():
