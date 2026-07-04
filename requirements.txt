@@ -1,0 +1,7 @@
+flask>=3.0
+flask-sock>=0.7
+opencv-python>=4.9
+numpy>=1.24
+ultralytics>=8.3
+# picamera2 is installed via apt on the Pi, not pip:
+#   sudo apt install python3-picamera2 python3-libcamera
