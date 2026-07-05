@@ -443,7 +443,7 @@ HTML = """<!DOCTYPE html>
   .badge.motion{ background:#3a2a00; color:var(--warn); }
   main { flex:1; display:grid; grid-template-columns:1fr 300px; gap:0; overflow:hidden; }
 .stream-wrap { position:relative; background:#000; display:flex; align-items:flex-start;
-                  justify-content:center; overflow:hidden; min-height:400px; }
+                  justify-content:center; overflow:hidden; min-height:400px; align-self:start; }
   .stream-wrap img { width:100%; height:100%; object-fit:contain; display:block; }
   .fps-badge { position:absolute; top:10px; left:10px; background:rgba(0,0,0,.6);
                padding:3px 8px; border-radius:6px; font-size:11px; color:#fff; font-family:monospace; }
