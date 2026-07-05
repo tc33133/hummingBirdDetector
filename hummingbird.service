@@ -1,0 +1,18 @@
+[Unit]
+Description=Hummingbird Detector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tom
+WorkingDirectory=/home/tom/hummingBirdDetector
+Environment=PATH=/home/tom/hummingBirdDetector/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/home/tom/hummingBirdDetector/venv/bin/python app.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
