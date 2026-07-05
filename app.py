@@ -72,7 +72,7 @@ MOTION_COOL_DOWN   = 2.0         # seconds after motion stops before saving clip
 MAX_CLIP_SECONDS   = 30          # hard cap on clip length
 
 # YOLO
-YOLO_MODEL_PATH    = "yolov8n.pt"   # swap for custom hummingbird model when available
+YOLO_MODEL_PATH    = "yolov8n_ncnn_model"   # NCNN export for Pi (run: yolo export model=yolov8n.pt format=ncnn)
 YOLO_CONF          = 0.40
 YOLO_CLASSES       = None           # None = all classes; set [14] for COCO "bird"
 FOCUS_LOCK_DIOPTERS= 0.25           # ~4ft fixed focus
