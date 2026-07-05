@@ -72,7 +72,7 @@ MOTION_COOL_DOWN   = 2.0         # seconds after motion stops before saving clip
 MAX_CLIP_SECONDS   = 30          # hard cap on clip length
 
 # YOLO
-YOLO_MODEL_PATH    = "yolov8n_ncnn_model"   # NCNN export for Pi (run: yolo export model=yolov8n.pt format=ncnn)
+YOLO_MODEL_PATH    = "yolov8n.onnx"   # ONNX export for Pi (run: yolo export model=yolov8n.pt format=onnx)
 YOLO_CONF          = 0.40
 YOLO_CLASSES       = None           # None = all classes; set [14] for COCO "bird"
 FOCUS_LOCK_DIOPTERS= 0.25           # ~4ft fixed focus
@@ -442,8 +442,8 @@ HTML = """<!DOCTYPE html>
   .badge.live  { background:#1a3a1a; color:var(--accent); }
   .badge.motion{ background:#3a2a00; color:var(--warn); }
   main { flex:1; display:grid; grid-template-columns:1fr 300px; gap:0; overflow:hidden; }
-  .stream-wrap { position:relative; background:#000; display:flex; align-items:center;
-                 justify-content:center; overflow:hidden; min-height:400px; }
+.stream-wrap { position:relative; background:#000; display:flex; align-items:flex-start;
+                  justify-content:center; overflow:hidden; min-height:400px; }
   .stream-wrap img { width:100%; height:100%; object-fit:contain; display:block; }
   .fps-badge { position:absolute; top:10px; left:10px; background:rgba(0,0,0,.6);
                padding:3px 8px; border-radius:6px; font-size:11px; color:#fff; font-family:monospace; }
